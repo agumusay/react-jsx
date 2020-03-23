@@ -1,0 +1,40 @@
+@import "variables";
+
+@mixin neo-outline-small {
+  background-color: $base-color;
+  box-shadow: 5px 5px 5px darken($color: $base-color, $amount: 15),
+    -5px -5px 5px lighten($color: $base-color, $amount: 5);
+}
+
+@mixin neo-inline {
+  background: $base-color;
+  box-shadow: inset 5px 5px 4px darken($color: $base-color, $amount: 10),
+    inset -5px -5px 4px lighten($color: $base-color, $amount: 5);
+}
+
+@mixin neo-colorful($color) {
+  background-color: $color;
+  background: linear-gradient(145deg, darken($color, $amount: 18%), darken($color, $amount: 5%));
+  box-shadow: 3px 3px 5px darken($color, $amount: 40%), -2px -2px 5px darken($color, $amount: 25%);
+}
+
+@mixin neo-text($color) {
+  color: $color;
+  text-shadow: 3px 3px 5px darken($color, $amount: 40%), -2px -2px 5px darken($color, $amount: 25%);
+}
+
+@mixin neo-outline-big {
+  background-color: $base-color;
+  box-shadow: 5px 5px 15px darken($color: $base-color, $amount: 20),
+    -5px -5px 15px lighten($color: $base-color, $amount: 15);
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,17 +1,33 @@
+@import "variables";
+@import "mixins";
+
+ul {
+  width: 80%;
+  @include neo-inline;
+  padding: 20px;
+}
 li {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border: 1px solid gray;
+
   margin-bottom: 20px;
   border-radius: 1rem;
+  width: 100%;
+  @include neo-outline-big;
 }
 
 .head {
   display: flex;
 }
 
+.head > img {
+  border-radius: 1rem;
+  @include neo-colorful(rgb(0, 195, 255));
+}
+
 .name-container {
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
   align-self: flex-end;
@@ -19,14 +35,53 @@ li {
 
 .name {
   font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.name span {
+  background-color: rgb(255, 145, 0);
+  font-size: 0.8rem;
+  vertical-align: top;
+  padding: 5px;
+  border-radius: 0.2rem;
+  margin-left: 5px;
 }
 
 .foot {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 30px 0px;
+  min-height: 50px;
+  border-radius: 0.5rem;
+  @include neo-inline;
 }
 
-.date{
-    display: flex;
-    justify-content: flex-end;
+.date {
+  display: flex;
+  justify-content: flex-end;
+  color: rgb(105, 105, 105);
+}
+
+.foot img {
+  min-width: 30px;
+  height: 30px;
+}
+
+.foot p {
+  margin-left: 5px;
+}
+.foot a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  border-radius: 0.4rem;
+  text-decoration: none;
+}
+
+.foot a:hover > p {
+  color: #ff0000;
+}
+
+.foot a:hover > img {
+  filter: invert(18%) sepia(91%) saturate(7041%) hue-rotate(358deg) brightness(97%) contrast(115%);
 }
